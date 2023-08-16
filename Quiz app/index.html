@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h2 id="taital"> WEALCOME TO JAVASCRIPT QUIZ APP </h2>
+    <main>
+
+        <H6>by Rock Ajit </H6>
+        <div class="container">
+
+            <h2 id="qution">1) Hello guys how are you?</h2>
+            <div class="optionbox">
+                <input class="option" type="radio" value="a" name="option">
+                <label for="">Option1</label>
+            </div>
+            <div class="optionbox">
+                <input class="option" type="radio" value="b" name="option">
+                <label for="">Option2</label>
+            </div>
+            <div class="optionbox">
+                <input class="option" type="radio" value="c" name="option">
+                <label for="">Option3</label>
+            </div>
+            <div class="optionbox">
+                <input class="option" type="radio" value="d" name="option">
+                <label for="">Option4</label>
+            </div>
+            <h2 id="resscor"></h2>
+            <button id="btn">
+                Sumbit
+            </button>
+        </div>
+
+
+
+
+    </main>
+    <!-- <script>
+        const allqution = [
+            {
+                'que': "Javascript is an _______ language?",
+                'a': "objcet orient",
+                'b': "objcet baced",
+                'c': "procedular",
+                'd': "none of the",
+                'ans': "a"
+
+            },
+            {
+                'que': "Which of the following keywords is used to define a variable in Javascript?",
+                'a': "ver",
+                'b': "let",
+                'c': "a & b",
+                'd': "none of the",
+                'ans': "c"
+            },
+            {
+                'que': "Which type of JavaScript language is ___",
+
+                'a': "Object-Oriented",
+                'b': "Object-Based",
+                'c': "Assembly-language",
+                'd': "High-level",
+                'ans': "b"
+            },
+            {
+                'que': "Which one of the following also known as Conditional Expression:",
+                'a': "Alternative to if-else",
+                'b': "Switch statement",
+                'c': "If-then-else statemen",
+                'd': "immediate i",
+                'ans': "a"
+            }
+        ]
+        let sumbitbtn = document.querySelector('#btn')
+        sumbitbtn.addEventListener(
+            "click", function () {
+                // nextqution()
+                chackans()
+
+
+            }
+        )
+
+
+
+        // =========================First qution ==================
+        const qution = document.querySelector('#qution')
+        let index = 0
+
+        // ====================Target Array qution======================
+
+        // ============= Target all option=================
+        let alloption = document.querySelectorAll(".option")
+
+        function firstqutionrun() {
+            resetinputvalue()
+
+            const arrqution = allqution[index]
+            qution.innerHTML = `${index + 1}) ${arrqution.que}`
+            alloption[0].nextElementSibling.innerHTML = arrqution.a;
+            alloption[1].nextElementSibling.innerHTML = arrqution.b;
+            alloption[2].nextElementSibling.innerHTML = arrqution.c;
+            alloption[3].nextElementSibling.innerHTML = arrqution.d;
+
+        }
+
+        // function nextqution() {
+        // }
+        let right = 0, rong = 0
+        function chackans() {
+            let inpans = getinputvalue()
+            // console.log(inpans);
+            let rightans = allqution[index]
+            // console.log(rightans.ans);
+            if (inpans == rightans.ans) {
+                console.log("hi");
+            }
+            else {
+                console.log("no");
+            }
+            index++
+            firstqutionrun()
+            return
+        }
+
+
+        function getinputvalue() {
+            let answer;
+            alloption.forEach(
+                (input) => {
+                    if (input.checked) {
+                        answer = input.value
+                        // console.log(answer);
+                    }
+
+                }
+            )
+            return answer
+        }
+
+        // =============Reset input value============
+        function resetinputvalue() {
+            alloption.forEach(
+                (ele) => {
+                    ele.checked = false
+                })
+        }
+
+
+        firstqutionrun()
+    </script> -->
+</body>
+
+<script src="script.js"></script>
+
+</html>
